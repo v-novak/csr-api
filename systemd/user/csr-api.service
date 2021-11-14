@@ -1,0 +1,11 @@
+[Unit]
+Description=CleanSpace Robotics API Server
+Requires=nginx.service
+After=nginx.service
+
+[Service]
+Type=simple
+ExecStart=/opt/csr_api/run.sh
+
+[Install]
+WantedBy=multi-user.target
