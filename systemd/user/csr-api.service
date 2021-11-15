@@ -6,6 +6,8 @@ After=nginx.service
 [Service]
 Type=simple
 ExecStart=/opt/csr_api/run.sh
+Restart=on-failure
+RestartSec=5s
 
 [Install]
 WantedBy=multi-user.target
