@@ -8,6 +8,8 @@ Type=simple
 ExecStart=/opt/csr_api/run.sh
 Restart=on-failure
 RestartSec=5s
+User=csr_api
+Group=csr_api
 
 [Install]
 WantedBy=multi-user.target
