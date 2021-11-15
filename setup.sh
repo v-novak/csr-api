@@ -1,9 +1,14 @@
 #!/usr/bin/env bash
 set -eux
 
+cd -- "$( dirname -- "${BASH_SOURCE[0]}" )"
+
 virtualenv pyenv
 source ./pyenv/bin/activate
-pip3 install < requirements.txt
+pip3 install -r requirements.txt
+deactivate
 
-mkdir -p /var/csr_api
-openssl rand -hex 32 > /var/csr_api/secret.txt
+openssl rand -hex 32 > secret.txt
+chmod 600 secret.txt
+
+cd -
