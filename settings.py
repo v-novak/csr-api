@@ -9,7 +9,7 @@ def server_settings():
     if DEBUG:
         secret_path = 'data/secret.txt'
     else:
-        secret_path = '/var/csr_api/secret.txt'
+        secret_path = '/opt/csr_api/secret.txt'
 
     return {
         'static_path': os.path.join(os.path.dirname(__file__), 'static'),
