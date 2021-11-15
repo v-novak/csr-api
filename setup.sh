@@ -1,8 +1,8 @@
 #!/usr/bin/env bash
 set -eux
 
-virtualenv3 pyenv
-source pyenv/bin.activate
+virtualenv pyenv
+source ./pyenv/bin/activate
 pip3 install < requirements.txt
 
 mkdir -p /var/csr_api
